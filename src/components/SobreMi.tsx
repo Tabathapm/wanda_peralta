@@ -1,7 +1,7 @@
 // import React from 'react';
 import { User, Target, Heart } from 'lucide-react';
 
-const About = () => {
+const SobreMi = () => {
   return (
     <section id="sobre-mi" className="py-20 bg-white">
       <div className="container mx-auto px-6">
@@ -17,8 +17,8 @@ const About = () => {
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-3">Perfil Profesional</h3>
             <p className="text-gray-600 leading-relaxed">
-              Técnica en Anatomía Patológica con más de 8 años de experiencia en 
-              laboratorios hospitalarios, especializada en histopatología y citología.
+              Técnica en Anatomía Patológica especializada en histopatología y citología,
+              con un enfoque centrado en la excelencia técnica y la precisión diagnostica.
             </p>
           </div>
 
@@ -46,7 +46,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="mt-16 max-w-4xl mx-auto">
+        {/* <div className="mt-16 max-w-4xl mx-auto">
           <div className="bg-gradient-to-r from-teal-50 to-cyan-50 p-8 rounded-2xl">
             <h3 className="text-2xl font-semibold text-gray-900 mb-6 text-center">Mi Trayectoria</h3>
             <p className="text-gray-700 leading-relaxed text-lg">
@@ -58,10 +58,25 @@ const About = () => {
               de calidad y precisión en cada procedimiento.
             </p>
           </div>
+        </div> */}
+
+        {/* Filosofía */}
+        <div className="mt-16 max-w-4xl mx-auto text-center">
+          <div className="bg-white p-8 rounded-2xl shadow-lg border">
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4">Mi Filosofía Profesional</h3>
+            <blockquote className="text-lg text-gray-700 italic leading-relaxed">
+              "Cada muestra que proceso representa una historia humana única. 
+              Mi compromiso va más allá de la técnica: es contribuir con precisión 
+              y dedicación al diagnóstico que puede cambiar la vida de una persona. 
+              La formación continua y el cuidado personal me permiten ofrecer 
+              siempre lo mejor de mí en esta noble profesión."
+            </blockquote>
+          </div>
         </div>
+
       </div>
     </section>
   );
 };
 
-export default About;
+export default SobreMi;

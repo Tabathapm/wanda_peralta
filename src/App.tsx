@@ -2,7 +2,7 @@
 import Header from './components/Header';
 import Hero from './components/Yo';
 import About from './components/SobreMi';
-import Experience from './components/Experiencia';
+import Experiencia from './components/Experiencia';
 import Educacion from './components/Educacion';
 import Tools from './components/Herramientas';
 import Interests from './components/Intereses';
@@ -16,7 +16,7 @@ function App() {
       <main>
         <Hero />
         <About />
-        <Experience />
+        <Experiencia />
         <Educacion />
         <Tools />
         <Interests />

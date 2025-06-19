@@ -1,12 +1,12 @@
 //import React from 'react';
 import Header from './components/Header';
-import Hero from './components/Yo';
-import About from './components/SobreMi';
+import Yo from './components/Yo';
+import SobreMi from './components/SobreMi';
 import Experiencia from './components/Experiencia';
 import Educacion from './components/Educacion';
 import Herramientas from './components/Herramientas';
-import Interests from './components/Intereses';
-import Awards from './components/Reconocimientos';
+import Intereses from './components/Intereses';
+import Reconocimientos from './components/Reconocimientos';
 import Footer from './components/Footer';
 
 function App() {
@@ -14,13 +14,13 @@ function App() {
     <div className="min-h-screen bg-gray-50" id="portfolio-content">
       <Header />
       <main>
-        <Hero />
-        <About />
+        <Yo />
+        <SobreMi />
         <Experiencia />
         <Educacion />
         <Herramientas />
-        <Interests />
-        <Awards />
+        <Intereses />
+        <Reconocimientos />
       </main>
       <Footer />
     </div>

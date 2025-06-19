@@ -15,7 +15,7 @@ Este es un portafolio digital y curr√≠culum vitae moderno para Wanda Peralta, T√
 1. Clona el repositorio:
 
    ```sh
-   git clone <url-del-repo>
+   git clone https://github.com/Tabathapm/wanda_peralta.git
    cd wanda_peralta
    ```
 

@@ -16,6 +16,7 @@ const Tools = () => {
         { name: "Azul de Toluidina", level: 82 }
       ]
     },
+
     {
       title: "Técnicas Especializadas",
       icon: <FlaskConical size={32} />,

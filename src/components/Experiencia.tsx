@@ -16,7 +16,7 @@ const Experiencia = () => {
         // "Colaboración directa con patólogos en casos complejos",
 
         "Realización de IHQ en aparato", 
-        "Procesado en procesador automático" ,
+        "Utilización del procesador automático" ,
         "Inclusion en parafina", 
         "Cortes histológicos en microtomo de rotación", 
         "Coloraciones de rutina y técnicas especiales", 
@@ -33,15 +33,21 @@ const Experiencia = () => {
       locacion: "Buenos Aires, Argentina",
       periodo: "Jul 2024 - dic 2024",
       descripcion: [
-        "Realización de IHQ en aparato", 
-        "Procesado en procesador automático" ,
-        "Inclusion en parafina", 
-        "Cortes histológicos en microtomo de rotación", 
-        "Coloraciones de rutina y técnicas especiales", 
-        "Montaje y entrega", 
-        "Retiro de muestras en quirófano e ingreso de las mismas al servicio",
-        "Tareas de archivo",
-        "Procesado y coloracion de muestras ginecológicas y no ginecológicas"
+        // "Realización de IHQ en aparato", 
+        // "Procesado en procesador automático" ,
+        // "Inclusion en parafina", 
+        // "Cortes histológicos en microtomo de rotación", 
+        // "Coloraciones de rutina y técnicas especiales", 
+        // "Montaje y entrega", 
+        // "Retiro de muestras en quirófano e ingreso de las mismas al servicio",
+        // "Tareas de archivo",
+        // "Procesado y coloracion de muestras ginecológicas y no ginecológicas"
+        
+        "Procesamiento de muestras histológicas y citológicas para diagnóstico",
+        "Realización de técnicas de tinción especiales (HE, PAS, Tricrómico, etc.)",
+        "Manejo de equipos automatizados de procesamiento histológico",
+        "Supervisión de protocolos de calidad y bioseguridad en el laboratorio"
+        // "Colaboración directa con patólogos en casos complejos",
       ],
       tecnologias: ["Histología", "Citología", "Inmunohistoquímica", "Microscopía", "Control de Calidad"]
     },
@@ -74,13 +80,13 @@ const Experiencia = () => {
       periodo: "Abr 2025 - Presente",
       descripcion: [
         "Procesado y coloracion de muestras ginecológicas y no ginecológicas( PAAF, líquidos de derrames, lavados, orinar, etc)",
-        "Procesado en procesador automático", 
+        "Utilización del procesador automático", 
         "Inclusion en parafina", 
         "Cortes histológicos en microtomo de rotación", 
         "Coloraciones de rutina y técnicas especiales, montaje y entrega", 
         "Tareas de archivo"
       ],
-      tecnologias: ["Citología", "Histología", "Control de Calidad"]
+      tecnologias: ["Citología", "Histología", "Microscopía", "Control de Calidad"]
     }
   ];
 

@@ -8,8 +8,8 @@ const Educacion = () => {
       institucion: "Universidad Nacional de La Matanza - UNLaM",
       locacion: "Buenos Aires, Argentina",
       periodo: "2023 - Presente",
-      promedio: "8.7/10",
-      descripcion: "Formación especializada en técnicas histológicas, citológicas y anatomopatológicas.",
+      promedio: "8/10",
+      descripcion: "Formación especializada en técnicas histológicas y citológicas.",
       logros: [
         "Graduado con mención honorífica",
         "Prácticas destacadas en Hospital Lalala",
@@ -89,7 +89,7 @@ const Educacion = () => {
                     
                     <p className="text-gray-600 mb-4">{edu.descripcion}</p>
                     
-                    <div>
+                    {/* <div>
                       <h5 className="font-semibold text-gray-900 mb-2">Logros destacados:</h5>
                       <ul className="space-y-1">
                         {edu.logros.map((logro, i) => (
@@ -99,7 +99,7 @@ const Educacion = () => {
                           </li>
                         ))}
                       </ul>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -107,7 +107,7 @@ const Educacion = () => {
           </div>
 
           {/* Certificaciones */}
-          <div className="mb-16">
+          {/* <div className="mb-16">
             <h3 className="text-2xl font-semibold text-gray-900 mb-8 text-center">
               Certificaciones Profesionales
             </h3>
@@ -125,10 +125,10 @@ const Educacion = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Cursos */}
-          <div className="bg-gray-50 p-8 rounded-2xl">
+          {/* <div className="bg-gray-50 p-8 rounded-2xl">
             <h3 className="text-2xl font-semibold text-gray-900 mb-6 text-center">
               Formación Complementaria
             </h3>
@@ -140,7 +140,7 @@ const Educacion = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

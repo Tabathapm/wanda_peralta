@@ -1,7 +1,7 @@
 // import React from 'react';
 import { MapPin, Mail, Phone, Linkedin, FileText } from 'lucide-react';
 
-const Hero = () => {
+const Yo = () => {
   return (
     <section className="pt-24 pb-16 bg-gradient-to-br from-teal-600 to-teal-800 text-white">
       <div className="container mx-auto px-6">
@@ -14,9 +14,8 @@ const Hero = () => {
               Técnica Universitaria en Anatomía Patológica
             </h2>
             <p className="text-lg text-teal-50 mb-8 leading-relaxed max-w-2xl">
-              Especialista en procesamiento de muestras histológicas, técnicas de tinción 
-              y diagnóstico anatomopatológico. Comprometida con la excelencia en el 
-              diagnóstico médico y la atención al paciente.
+              Especialista en procesamiento de muestras histológicas y citológicas, técnicas de tinción 
+              y diagnóstico citológico. 
             </p>
             
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
@@ -57,4 +56,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Yo;

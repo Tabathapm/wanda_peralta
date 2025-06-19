@@ -1,21 +1,86 @@
 // import React from 'react';
 import { Briefcase, Calendar, MapPin } from 'lucide-react';
 
-const Experience = () => {
-  const experiences = [
+const Experiencia = () => {
+  const experiencias = [
     {
-      title: "Técnico Superior en Anatomía Patológica",
-      company: "Hospital Universitario La Paz",
-      location: "Lugar, Pais",
-      period: "2020 - Presente",
-      description: [
-        "Procesamiento de muestras histológicas y citológicas para diagnóstico",
-        "Realización de técnicas de tinción especiales (HE, PAS, Tricrómico, etc.)",
-        "Manejo de equipos automatizados de procesamiento histológico",
-        "Supervisión de protocolos de calidad y bioseguridad en el laboratorio",
-        "Colaboración directa con patólogos en casos complejos"
+      titulo: "Práctica Universitaria",
+      lugar: "Hospital Cuenca Alta Néstor Kirchner",
+      locacion: "Buenos Aires, Argentina",
+      periodo: "Jul 2023 - Jun 2024",
+      descripcion: [
+        // "Procesamiento de muestras histológicas y citológicas para diagnóstico",
+        // "Realización de técnicas de tinción especiales (HE, PAS, Tricrómico, etc.)",
+        // "Manejo de equipos automatizados de procesamiento histológico",
+        // "Supervisión de protocolos de calidad y bioseguridad en el laboratorio",
+        // "Colaboración directa con patólogos en casos complejos",
+
+        "Realización de IHQ en aparato", 
+        "Procesado en procesador automático" ,
+        "Inclusion en parafina", 
+        "Cortes histológicos en microtomo de rotación", 
+        "Coloraciones de rutina y técnicas especiales", 
+        "Montaje y entrega", 
+        "Retiro de muestras en quirófano e ingreso de las mismas al servicio",
+        "Tareas de archivo",
+        "Procesado y coloracion de muestras ginecológicas y no ginecológicas"
       ],
-      technologies: ["Histopatología", "Citología", "Inmunohistoquímica", "Microscopía", "Control de Calidad"]
+      tecnologias: ["Histología", "Citología", "Inmunohistoquímica", "Microscopía", "Control de Calidad"]
+    },
+    {
+      titulo: "Práctica Universitaria",
+      lugar: "Centro Rossi",
+      locacion: "Buenos Aires, Argentina",
+      periodo: "Jul 2024 - dic 2024",
+      descripcion: [
+        "Realización de IHQ en aparato", 
+        "Procesado en procesador automático" ,
+        "Inclusion en parafina", 
+        "Cortes histológicos en microtomo de rotación", 
+        "Coloraciones de rutina y técnicas especiales", 
+        "Montaje y entrega", 
+        "Retiro de muestras en quirófano e ingreso de las mismas al servicio",
+        "Tareas de archivo",
+        "Procesado y coloracion de muestras ginecológicas y no ginecológicas"
+      ],
+      tecnologias: ["Histología", "Citología", "Inmunohistoquímica", "Microscopía", "Control de Calidad"]
+    },
+    {
+      titulo: "Citotécnica",
+      lugar: "Red Pathology",
+      locacion: "Buenos Aires, Argentina",
+      periodo: "Jun 2025 - Jun 2025",
+      descripcion: [
+        "Proceso de coloración de muestras citológicas mediante la técnica de Papanicolaou (PAP)"
+      ],
+      tecnologias: ["Citología", "Control de Calidad"]
+    },
+    {
+      titulo: "Practicante Universitaria",
+      lugar: "Universidad Nacional de La Matanza - UNLaM",
+      locacion: "Buenos Aires, Argentina",
+      periodo: "Abr 2023 - Presente",
+      descripcion: [
+        "Procesado y coloracion de muestras ginecológicas y no ginecológicas( PAAF, líquidos de derrames, lavados, orinar, etc)",
+        "Screening de citología ginecológica cervicovaginal",
+        "Screening de citología no ginecológica"
+      ],
+      tecnologias: ["Citología", "Control de Calidad"]
+    },
+    {
+      titulo: "Practicante Universitaria",
+      lugar: "Hospital General de Agudos Francisco Santojanni",
+      locacion: "Buenos Aires, Argentina",
+      periodo: "Abr 2025 - Presente",
+      descripcion: [
+        "Procesado y coloracion de muestras ginecológicas y no ginecológicas( PAAF, líquidos de derrames, lavados, orinar, etc)",
+        "Procesado en procesador automático", 
+        "Inclusion en parafina", 
+        "Cortes histológicos en microtomo de rotación", 
+        "Coloraciones de rutina y técnicas especiales, montaje y entrega", 
+        "Tareas de archivo"
+      ],
+      tecnologias: ["Citología", "Histología", "Control de Calidad"]
     }
   ];
 
@@ -28,10 +93,10 @@ const Experience = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          {experiences.map((exp, index) => (
+          {experiencias.map((exp, index) => (
             <div key={index} className="relative mb-12 last:mb-0">
               {/* Timeline line */}
-              {index !== experiences.length - 1 && (
+              {index !== experiencias.length - 1 && (
                 <div className="absolute left-6 top-16 w-0.5 h-full bg-teal-200 hidden md:block"></div>
               )}
               
@@ -45,25 +110,25 @@ const Experience = () => {
                 <div className="flex-1 bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-1">{exp.title}</h3>
-                      <h4 className="text-lg text-teal-600 font-medium">{exp.company}</h4>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-1">{exp.titulo}</h3>
+                      <h4 className="text-lg text-teal-600 font-medium">{exp.lugar}</h4>
                     </div>
                     <div className="text-gray-500 text-sm mt-2 sm:mt-0">
                       <div className="flex items-center space-x-4">
                         <span className="flex items-center space-x-1">
                           <Calendar size={16} />
-                          <span>{exp.period}</span>
+                          <span>{exp.periodo}</span>
                         </span>
                         <span className="flex items-center space-x-1">
                           <MapPin size={16} />
-                          <span>{exp.location}</span>
+                          <span>{exp.locacion}</span>
                         </span>
                       </div>
                     </div>
                   </div>
                   
                   <ul className="space-y-2 mb-4">
-                    {exp.description.map((item, i) => (
+                    {exp.descripcion.map((item, i) => (
                       <li key={i} className="text-gray-600 flex items-start">
                         <span className="w-2 h-2 bg-teal-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                         {item}
@@ -72,9 +137,9 @@ const Experience = () => {
                   </ul>
                   
                   <div className="flex flex-wrap gap-2">
-                    {exp.technologies.map((tech, i) => (
+                    {exp.tecnologias.map((tecnologia, i) => (
                       <span key={i} className="px-3 py-1 bg-teal-100 text-teal-800 text-sm rounded-full">
-                        {tech}
+                        {tecnologia}
                       </span>
                     ))}
                   </div>
@@ -88,4 +153,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default Experiencia;

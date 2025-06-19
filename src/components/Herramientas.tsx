@@ -1,64 +1,64 @@
-import React from 'react';
+//import React from 'react';
 import { Microscope, FlaskConical, Shield, Wrench } from 'lucide-react';
 
-const Tools = () => {
-  const toolCategories = [
+const Herramientas = () => {
+  const herramientasCategoria = [
     {
-      title: "Técnicas Histológicas",
-      icon: <Microscope size={32} />,
+      titulo: "Técnicas Histológicas",
+      icono: <Microscope size={32} />,
       color: "teal",
-      tools: [
-        { name: "Hematoxilina-Eosina (HE)", level: 95 },
-        { name: "Tricrómico de Masson", level: 90 },
-        { name: "PAS (Ácido Peryódico de Schiff)", level: 88 },
-        { name: "Reticulina de Gomori", level: 85 },
-        { name: "Van Gieson", level: 87 },
-        { name: "Azul de Toluidina", level: 82 }
+      herramientas: [
+        { nombre: "Hematoxilina-Eosina (HE)", nivel: 95 },
+        { nombre: "Tricrómico de Masson", nivel: 90 },
+        { nombre: "PAS (Ácido Peryódico de Schiff)", nivel: 88 },
+        { nombre: "Reticulina de Gomori", nivel: 85 },
+        { nombre: "Van Gieson", nivel: 87 },
+        { nombre: "Azul de Toluidina", nivel: 82 }
       ]
     },
 
     {
-      title: "Técnicas Especializadas",
-      icon: <FlaskConical size={32} />,
+      titulo: "Técnicas Especializadas",
+      icono: <FlaskConical size={32} />,
       color: "blue",
-      tools: [
-        { name: "Inmunohistoquímica", level: 88 },
-        { name: "Citología Ginecológica", level: 85 },
-        { name: "Citología de Líquidos", level: 80 },
-        { name: "Técnicas de Congelación", level: 78 },
-        { name: "Microscopía Electrónica", level: 70 },
-        { name: "Hibridación in situ", level: 65 }
+      herramientas: [
+        { nombre: "Inmunohistoquímica", nivel: 88 },
+        { nombre: "Citología Ginecológica", nivel: 85 },
+        { nombre: "Citología de Líquidos", nivel: 80 },
+        { nombre: "Técnicas de Congelación", nivel: 78 },
+        { nombre: "Microscopía Electrónica", nivel: 70 },
+        { nombre: "Hibridación in situ", nivel: 65 }
       ]
     },
     {
-      title: "Equipos de Laboratorio",
-      icon: <Wrench size={32} />,
+      titulo: "Equipos de Laboratorio",
+      icono: <Wrench size={32} />,
       color: "purple",
-      tools: [
-        { name: "Micrótomo Rotatorio", level: 95 },
-        { name: "Procesador de Tejidos", level: 92 },
-        { name: "Estación de Inclusión", level: 90 },
-        { name: "Teñidor Automático", level: 88 },
-        { name: "Criostato", level: 85 },
-        { name: "Microscopio Óptico", level: 98 }
+      herramientas: [
+        { nombre: "Micrótomo Rotatorio", nivel: 95 },
+        { nombre: "Procesador de Tejidos", nivel: 92 },
+        { nombre: "Estación de Inclusión", nivel: 90 },
+        { nombre: "Teñidor Automático", nivel: 88 },
+        { nombre: "Criostato", nivel: 85 },
+        { nombre: "Microscopio Óptico", nivel: 98 }
       ]
     },
     {
-      title: "Bioseguridad y Calidad",
-      icon: <Shield size={32} />,
+      titulo: "Bioseguridad y Calidad",
+      icono: <Shield size={32} />,
       color: "green",
-      tools: [
-        { name: "Protocolos de Bioseguridad", level: 95 },
-        { name: "Control de Calidad", level: 92 },
-        { name: "Gestión de Residuos", level: 90 },
-        { name: "Documentación ISO", level: 85 },
-        { name: "Auditorías Internas", level: 80 },
-        { name: "Trazabilidad de Muestras", level: 88 }
+      herramientas: [
+        { nombre: "Protocolos de Bioseguridad", nivel: 95 },
+        { nombre: "Control de Calidad", nivel: 92 },
+        { nombre: "Gestión de Residuos", nivel: 90 },
+        { nombre: "Documentación ISO", nivel: 85 },
+        { nombre: "Auditorías Internas", nivel: 80 },
+        { nombre: "Trazabilidad de Muestras", nivel: 88 }
       ]
     }
   ];
 
-  const getColorClasses = (color: string) => {
+  const clasesDeColores = (color: string) => {
     const colorMap = {
       teal: {
         bg: 'bg-teal-100',
@@ -97,31 +97,31 @@ const Tools = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {toolCategories.map((category, index) => {
-            const colors = getColorClasses(category.color);
+          {herramientasCategoria.map((categoria, index) => {
+            const colores = clasesDeColores(categoria.color);
             
             return (
               <div key={index} className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="flex items-center mb-6">
-                  <div className={`w-16 h-16 ${colors.bg} rounded-full flex items-center justify-center mr-4`}>
-                    <div className={colors.text}>
-                      {category.icon}
+                  <div className={`w-16 h-16 ${colores.bg} rounded-full flex items-center justify-center mr-4`}>
+                    <div className={colores.text}>
+                      {categoria.icono}
                     </div>
                   </div>
-                  <h3 className="text-2xl font-semibold text-gray-900">{category.title}</h3>
+                  <h3 className="text-2xl font-semibold text-gray-900">{categoria.titulo}</h3>
                 </div>
 
                 <div className="space-y-4">
-                  {category.tools.map((tool, toolIndex) => (
-                    <div key={toolIndex} className="space-y-2">
+                  {categoria.herramientas.map((herramienta, herramientaIndex) => (
+                    <div key={herramientaIndex} className="space-y-2">
                       <div className="flex justify-between items-center">
-                        <span className="font-medium text-gray-700">{tool.name}</span>
-                        <span className="text-sm text-gray-500">{tool.level}%</span>
+                        <span className="font-medium text-gray-700">{herramienta.nombre}</span>
+                        <span className="text-sm text-gray-500">{herramienta.nivel}%</span>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-2.5">
                         <div 
-                          className={`${colors.progress} h-2.5 rounded-full transition-all duration-1000 ease-out`}
-                          style={{ width: `${tool.level}%` }}
+                          className={`${colores.progress} h-2.5 rounded-full transition-all duration-1000 ease-out`}
+                          style={{ width: `${herramienta.nivel}%` }}
                         ></div>
                       </div>
                     </div>
@@ -132,7 +132,7 @@ const Tools = () => {
           })}
         </div>
 
-        {/* Additional Skills */}
+        {/* Competencias Adicionales */}
         <div className="mt-16 max-w-4xl mx-auto">
           <div className="bg-white p-8 rounded-2xl shadow-lg">
             <h3 className="text-2xl font-semibold text-gray-900 mb-6 text-center">
@@ -157,7 +157,7 @@ const Tools = () => {
                 <h4 className="font-semibold text-gray-900 mb-3">Idiomas</h4>
                 <div className="space-y-2">
                   <span className="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Español (Nativo)</span>
-                  <span className="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Inglés (B2)</span>
+                  <span className="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Inglés (Técnico)</span>
                 </div>
               </div>
             </div>
@@ -168,4 +168,4 @@ const Tools = () => {
   );
 };
 
-export default Tools;
+export default Herramientas;

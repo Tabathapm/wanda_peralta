@@ -73,10 +73,7 @@ const Footer = () => {
                 <a href="https://www.linkedin.com/in/tabatha-peralta/" target='_blank' >
                   Tabatha Peralta
                 </a> 
-                &nbsp;, CV Digital creado con
               </span>
-              <Heart className="text-red-500" size={16} />
-              <span>y tecnología React</span>
             </div>
             <div className="text-sm text-gray-400">
               Última actualización: {new Date().toLocaleDateString('es-ES')}

@@ -4,7 +4,7 @@ import Hero from './components/Yo';
 import About from './components/SobreMi';
 import Experiencia from './components/Experiencia';
 import Educacion from './components/Educacion';
-import Tools from './components/Herramientas';
+import Herramientas from './components/Herramientas';
 import Interests from './components/Intereses';
 import Awards from './components/Reconocimientos';
 import Footer from './components/Footer';
@@ -18,7 +18,7 @@ function App() {
         <About />
         <Experiencia />
         <Educacion />
-        <Tools />
+        <Herramientas />
         <Interests />
         <Awards />
       </main>

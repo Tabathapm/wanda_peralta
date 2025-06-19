@@ -7,7 +7,7 @@ const Intereses = () => {
       titulo: "Investigación Médica",
       icono: <Microscope size={32} />,
       color: "bg-teal-500",
-      descripcion: "Seguimiento de avances en patología molecular y nuevas técnicas diagnósticas."
+      descripcion: "Seguimiento de avances y nuevas técnicas."
     },
     {
       titulo: "Fotografía Científica",

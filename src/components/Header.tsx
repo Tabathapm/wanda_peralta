@@ -1,6 +1,155 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Download, Menu, X } from 'lucide-react';
 import html2pdf from 'html2pdf.js';
+
+const CV = React.forwardRef((props, ref) => (
+  <div
+    ref={ref}
+    style={{
+      fontFamily: 'Arial, sans-serif',
+      maxWidth: '800px',
+      margin: '0 auto',
+      padding: '40px',
+      lineHeight: 1.6,
+      color: '#333',
+      backgroundColor: '#fff'
+    }}
+  >
+    <div style={{ textAlign: 'center', marginBottom: '20px', borderBottom: '3px solid #0d9488', paddingBottom: '20px' }}>
+      <h1 style={{ fontSize: '32px', margin: 0, color: '#0d9488', fontWeight: 'bold' }}>Wanda Peralta</h1>
+      <h2 style={{ fontSize: '18px', margin: '10px 0', color: '#666', fontWeight: 'normal' }}>Técnica Universitaria en Anatomía Patológica</h2>
+      <div style={{ marginTop: '15px', fontSize: '14px', color: '#666' }}>
+        <span style={{ marginRight: '20px' }}>📧 wandaperalta850@gmail.com</span>
+        <span style={{ marginRight: '20px' }}>📱 +54 11 6902 3229</span>
+        <span>📍 Buenos Aires, Argentina</span>
+      </div>
+    </div>
+
+    <div style={{ marginBottom: '30px' }}>
+      {/* <h3 style={{ color: '#0d9488', fontSize: '18px', marginBottom: '10px', borderBottom: '2px solid #0d9488', paddingBottom: '5px' }}>PERFIL PROFESIONAL</h3> */}
+      <p style={{ margin: 0, textAlign: 'justify' }}>
+        Técnica Universitaria en Anatomía Patológica con más de 8 años de experiencia en laboratorios hospitalarios, especializada en histología y citología. Comprometida con la excelencia en el diagnóstico médico y la aplicación de protocolos de calidad y bioseguridad. Experiencia en técnicas avanzadas de inmunohistoquímica y manejo de equipos especializados.
+      </p>
+    </div>
+
+    <div style={{ marginBottom: '30px' }}>
+      <h3 style={{ color: '#0d9488', fontSize: '18px', marginBottom: '15px', borderBottom: '2px solid #0d9488', paddingBottom: '5px' }}>EXPERIENCIA PROFESIONAL</h3>
+      <div style={{ marginBottom: '20px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '5px' }}>
+          <h4 style={{ margin: 0, fontSize: '16px', color: '#333' }}>Técnico Superior en Anatomía Patológica</h4>
+          <span style={{ fontSize: '14px', color: '#666' }}>2020 - Presente</span>
+        </div>
+        <p style={{ margin: '0 0 5px 0', fontWeight: 'bold', color: '#0d9488' }}>Hospital Lala, Argentina</p>
+        <ul style={{ margin: '10px 0', paddingLeft: '20px' }}>
+          <li>Procesamiento de muestras histológicas y citológicas para diagnóstico</li>
+          <li>Realización de técnicas de tinción especiales (HE, PAS, Tricrómico)</li>
+          <li>Manejo de equipos automatizados de procesamiento histológico</li>
+          <li>Supervisión de protocolos de calidad y bioseguridad</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style={{ marginBottom: '10px' }}>
+      <h3 style={{ color: '#0d9488', fontSize: '18px', marginBottom: '15px', borderBottom: '2px solid #0d9488', paddingBottom: '5px' }}>FORMACIÓN ACADÉMICA</h3>
+      <div style={{ marginBottom: '15px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '5px' }}>
+          <h4 style={{ margin: 0, fontSize: '16px', color: '#333' }}>Técnico Universitario en Anatomía Patológica</h4>
+          <span style={{ fontSize: '14px', color: '#666' }}>2023 - Presente</span>
+        </div>
+        <p style={{ margin: 0, color: '#0d9488', fontWeight: 'bold' }}>Universidad Nacional de La Matanza - UNLaM</p>
+        <p style={{ margin: '5px 0', fontSize: '14px' }}>Nota media: 8.7/10 - Graduada de pedo</p>
+      </div>
+    </div>
+
+    <div style={{ marginBottom: '0px' }}>
+      <h3 style={{ color: '#0d9488', fontSize: '18px', marginBottom: '15px', borderBottom: '2px solid #0d9488', paddingBottom: '5px' }}>COMPETENCIAS TÉCNICAS</h3>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+        <div>
+          <h4 style={{ margin: '0 0 10px 0', fontSize: '14px', color: '#333', fontWeight: 'bold' }}>Técnicas Histológicas:</h4>
+          <ul style={{ margin: 0, paddingLeft: '15px', fontSize: '13px' }}>
+            <li>Hematoxilina-Eosina (HE)</li>
+            <li>Tricrómico de Masson</li>
+            <li>PAS (Ácido Peryódico de Schiff)</li>
+            <li>Reticulina de Gomori</li>
+            <li>Van Gieson</li>
+          </ul>
+        </div>
+        <div>
+          <h4 style={{ margin: '0 0 10px 0', fontSize: '14px', color: '#333', fontWeight: 'bold' }}>Técnicas Especializadas:</h4>
+          <ul style={{ margin: 0, paddingLeft: '15px', fontSize: '13px' }}>
+            <li>Inmunohistoquímica</li>
+            <li>Citología Ginecológica</li>
+            <li>Citología de Líquidos</li>
+            <li>Técnicas de Congelación</li>
+            <li>Microscopía Electrónica</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginTop: '15px' }}>
+        <div>
+          <h4 style={{ margin: '0 0 10px 0', fontSize: '14px', color: '#333', fontWeight: 'bold' }}>Equipos de Laboratorio:</h4>
+          <ul style={{ margin: 0, paddingLeft: '15px', fontSize: '13px' }}>
+            <li>Micrótomo Rotatorio</li>
+            <li>Procesador de Tejidos</li>
+            <li>Estación de Inclusión</li>
+            <li>Teñidor Automático</li>
+            <li>Criostato</li>
+          </ul>
+        </div>
+        <div>
+          <h4 style={{ margin: '0 0 10px 0', fontSize: '14px', color: '#333', fontWeight: 'bold' }}>Bioseguridad y Calidad:</h4>
+          <ul style={{ margin: 0, paddingLeft: '15px', fontSize: '13px' }}>
+            <li>Protocolos de Bioseguridad</li>
+            <li>Control de Calidad</li>
+            <li>Gestión de Residuos</li>
+            <li>Documentación ISO 15189</li>
+            <li>Trazabilidad de Muestras</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    {/* <div style={{ marginBottom: '30px' }}>
+      <h3 style={{ color: '#0d9488', fontSize: '18px', marginBottom: '15px', borderBottom: '2px solid #0d9488', paddingBottom: '5px' }}>CERTIFICACIONES PROFESIONALES</h3>
+      <ul style={{ margin: 0, paddingLeft: '20px' }}>
+        <li><strong>Certificación en Bioseguridad en Laboratorios</strong> - Colegio Profesional de Técnicos Sanitarios (2023)</li>
+        <li><strong>Curso Avanzado de Inmunohistoquímica</strong> - Sociedad Española de Anatomía Patológica (2022)</li>
+        <li><strong>Especialización en Citología Ginecológica</strong> - Hospital Universitario Ramón y Cajal (2021)</li>
+        <li><strong>Certificación en Control de Calidad ISO 15189</strong> (2021)</li>
+      </ul>
+    </div> */}
+
+    {/* <div style={{ marginBottom: '30px' }}>
+      <h3 style={{ color: '#0d9488', fontSize: '18px', marginBottom: '15px', borderBottom: '2px solid #0d9488', paddingBottom: '5px' }}>RECONOCIMIENTOS Y LOGROS</h3>
+      <ul style={{ margin: 0, paddingLeft: '20px' }}>
+        <li><strong>Técnico del Año 2023</strong> - Hospital Universitario La Paz</li>
+        <li><strong>Mejor Caso Clínico Presentado</strong> - XXXV Congreso Nacional de Anatomía Patológica (2022)</li>
+        <li><strong>Premio a la Innovación Técnica</strong> - Sociedad Española de Técnicos en Anatomía Patológica (2021)</li>
+        <li><strong>Certificación de Excelencia en Bioseguridad</strong> - Ministerio de Sanidad (2022)</li>
+      </ul>
+    </div> */}
+
+    {/* <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '30px' }}> */}
+      {/* <div>
+        <h3 style={{ color: '#0d9488', fontSize: '18px', marginBottom: '15px', borderBottom: '2px solid #0d9488', paddingBottom: '5px' }}>IDIOMAS</h3>
+        <ul style={{ margin: 0, paddingLeft: '20px' }}>
+          <li><strong>Español:</strong> Nativo</li>
+          <li><strong>Inglés:</strong> Técnico</li>
+        </ul>
+      </div> */}
+      {/* <div>
+        <h3 style={{ color: '#0d9488', fontSize: '18px', marginBottom: '15px', borderBottom: '2px solid #0d9488', paddingBottom: '5px' }}>INFORMACIÓN ADICIONAL</h3>
+        <ul style={{ margin: 0, paddingLeft: '20px', fontSize: '14px' }}>
+          <li>15,000+ muestras procesadas</li>
+          <li>8 años de experiencia</li>
+          <li>25+ técnicas dominadas</li>
+          <li>Disponibilidad inmediata</li>
+        </ul>
+      </div> */}
+    {/* </div> */}
+  </div>
+));
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,235 +172,25 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const pdfRef = useRef();
+
   const downloadPDF = () => {
-    // Crear contenido específico para CV en PDF
-    const cvContent = `
-      <div style="font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; line-height: 1.6; color: #333;">
-        <!-- Header del CV -->
-        <div style="text-align: center; margin-bottom: 40px; border-bottom: 3px solid #0d9488; padding-bottom: 20px;">
-          <h1 style="font-size: 32px; margin: 0; color: #0d9488; font-weight: bold;">María Elena Rodríguez</h1>
-          <h2 style="font-size: 18px; margin: 10px 0; color: #666; font-weight: normal;">Técnico Superior en Anatomía Patológica</h2>
-          <div style="margin-top: 15px; font-size: 14px; color: #666;">
-            <span style="margin-right: 20px;">📧 maria.rodriguez@email.com</span>
-            <span style="margin-right: 20px;">📱 +34 612 345 678</span>
-            <span>📍 Madrid, España</span>
-          </div>
-        </div>
-
-        <!-- Perfil Profesional -->
-        <div style="margin-bottom: 30px;">
-          <h3 style="color: #0d9488; font-size: 18px; margin-bottom: 10px; border-bottom: 2px solid #0d9488; padding-bottom: 5px;">PERFIL PROFESIONAL</h3>
-          <p style="margin: 0; text-align: justify;">
-            Técnico Superior en Anatomía Patológica con más de 8 años de experiencia en laboratorios hospitalarios, 
-            especializada en histopatología y citología. Comprometida con la excelencia en el diagnóstico médico 
-            y la aplicación de protocolos de calidad y bioseguridad. Experiencia en técnicas avanzadas de 
-            inmunohistoquímica y manejo de equipos especializados.
-          </p>
-        </div>
-
-        <!-- Experiencia Profesional -->
-        <div style="margin-bottom: 30px;">
-          <h3 style="color: #0d9488; font-size: 18px; margin-bottom: 15px; border-bottom: 2px solid #0d9488; padding-bottom: 5px;">EXPERIENCIA PROFESIONAL</h3>
-          
-          <div style="margin-bottom: 20px;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
-              <h4 style="margin: 0; font-size: 16px; color: #333;">Técnico Superior en Anatomía Patológica</h4>
-              <span style="font-size: 14px; color: #666;">2020 - Presente</span>
-            </div>
-            <p style="margin: 0 0 5px 0; font-weight: bold; color: #0d9488;">Hospital Universitario La Paz, Madrid</p>
-            <ul style="margin: 10px 0; padding-left: 20px;">
-              <li>Procesamiento de muestras histológicas y citológicas para diagnóstico</li>
-              <li>Realización de técnicas de tinción especiales (HE, PAS, Tricrómico)</li>
-              <li>Manejo de equipos automatizados de procesamiento histológico</li>
-              <li>Supervisión de protocolos de calidad y bioseguridad</li>
-            </ul>
-          </div>
-
-          <div style="margin-bottom: 20px;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
-              <h4 style="margin: 0; font-size: 16px; color: #333;">Técnico en Anatomía Patológica</h4>
-              <span style="font-size: 14px; color: #666;">2018 - 2020</span>
-            </div>
-            <p style="margin: 0 0 5px 0; font-weight: bold; color: #0d9488;">Hospital General de Segovia</p>
-            <ul style="margin: 10px 0; padding-left: 20px;">
-              <li>Preparación y procesamiento de biopsias y piezas quirúrgicas</li>
-              <li>Realización de técnicas de tinción rutinarias y especiales</li>
-              <li>Mantenimiento preventivo de equipos de laboratorio</li>
-              <li>Gestión de archivo de bloques de parafina y laminillas</li>
-            </ul>
-          </div>
-
-          <div style="margin-bottom: 20px;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
-              <h4 style="margin: 0; font-size: 16px; color: #333;">Técnico Junior en Laboratorio</h4>
-              <span style="font-size: 14px; color: #666;">2016 - 2018</span>
-            </div>
-            <p style="margin: 0 0 5px 0; font-weight: bold; color: #0d9488;">Centro de Diagnóstico Médico, Valladolid</p>
-            <ul style="margin: 10px 0; padding-left: 20px;">
-              <li>Recepción y registro de muestras anatomopatológicas</li>
-              <li>Preparación de reactivos y soluciones para tinción</li>
-              <li>Asistencia en técnicas básicas de histopatología</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Formación Académica -->
-        <div style="margin-bottom: 30px;">
-          <h3 style="color: #0d9488; font-size: 18px; margin-bottom: 15px; border-bottom: 2px solid #0d9488; padding-bottom: 5px;">FORMACIÓN ACADÉMICA</h3>
-          
-          <div style="margin-bottom: 15px;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
-              <h4 style="margin: 0; font-size: 16px; color: #333;">Técnico Superior en Anatomía Patológica y Citodiagnóstico</h4>
-              <span style="font-size: 14px; color: #666;">2014 - 2016</span>
-            </div>
-            <p style="margin: 0; color: #0d9488; font-weight: bold;">IES Sanitario Virgen de la Paloma, Madrid</p>
-            <p style="margin: 5px 0; font-size: 14px;">Nota media: 8.7/10 - Graduado con mención honorífica</p>
-          </div>
-
-          <div style="margin-bottom: 15px;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
-              <h4 style="margin: 0; font-size: 16px; color: #333;">Bachillerato Científico-Tecnológico</h4>
-              <span style="font-size: 14px; color: #666;">2012 - 2014</span>
-            </div>
-            <p style="margin: 0; color: #0d9488; font-weight: bold;">IES Miguel de Cervantes, Madrid</p>
-            <p style="margin: 5px 0; font-size: 14px;">Nota media: 8.2/10 - Matrícula de honor en Biología</p>
-          </div>
-        </div>
-
-        <!-- Competencias Técnicas -->
-        <div style="margin-bottom: 30px;">
-          <h3 style="color: #0d9488; font-size: 18px; margin-bottom: 15px; border-bottom: 2px solid #0d9488; padding-bottom: 5px;">COMPETENCIAS TÉCNICAS</h3>
-          
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-            <div>
-              <h4 style="margin: 0 0 10px 0; font-size: 14px; color: #333; font-weight: bold;">Técnicas Histológicas:</h4>
-              <ul style="margin: 0; padding-left: 15px; font-size: 13px;">
-                <li>Hematoxilina-Eosina (HE)</li>
-                <li>Tricrómico de Masson</li>
-                <li>PAS (Ácido Peryódico de Schiff)</li>
-                <li>Reticulina de Gomori</li>
-                <li>Van Gieson</li>
-              </ul>
-            </div>
-            <div>
-              <h4 style="margin: 0 0 10px 0; font-size: 14px; color: #333; font-weight: bold;">Técnicas Especializadas:</h4>
-              <ul style="margin: 0; padding-left: 15px; font-size: 13px;">
-                <li>Inmunohistoquímica</li>
-                <li>Citología Ginecológica</li>
-                <li>Citología de Líquidos</li>
-                <li>Técnicas de Congelación</li>
-                <li>Microscopía Electrónica</li>
-              </ul>
-            </div>
-          </div>
-
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px;">
-            <div>
-              <h4 style="margin: 0 0 10px 0; font-size: 14px; color: #333; font-weight: bold;">Equipos de Laboratorio:</h4>
-              <ul style="margin: 0; padding-left: 15px; font-size: 13px;">
-                <li>Micrótomo Rotatorio</li>
-                <li>Procesador de Tejidos</li>
-                <li>Estación de Inclusión</li>
-                <li>Teñidor Automático</li>
-                <li>Criostato</li>
-              </ul>
-            </div>
-            <div>
-              <h4 style="margin: 0 0 10px 0; font-size: 14px; color: #333; font-weight: bold;">Bioseguridad y Calidad:</h4>
-              <ul style="margin: 0; padding-left: 15px; font-size: 13px;">
-                <li>Protocolos de Bioseguridad</li>
-                <li>Control de Calidad</li>
-                <li>Gestión de Residuos</li>
-                <li>Documentación ISO 15189</li>
-                <li>Trazabilidad de Muestras</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Certificaciones -->
-        <div style="margin-bottom: 30px;">
-          <h3 style="color: #0d9488; font-size: 18px; margin-bottom: 15px; border-bottom: 2px solid #0d9488; padding-bottom: 5px;">CERTIFICACIONES PROFESIONALES</h3>
-          <ul style="margin: 0; padding-left: 20px;">
-            <li><strong>Certificación en Bioseguridad en Laboratorios</strong> - Colegio Profesional de Técnicos Sanitarios (2023)</li>
-            <li><strong>Curso Avanzado de Inmunohistoquímica</strong> - Sociedad Española de Anatomía Patológica (2022)</li>
-            <li><strong>Especialización en Citología Ginecológica</strong> - Hospital Universitario Ramón y Cajal (2021)</li>
-            <li><strong>Certificación en Control de Calidad ISO 15189</strong> (2021)</li>
-          </ul>
-        </div>
-
-        <!-- Reconocimientos -->
-        <div style="margin-bottom: 30px;">
-          <h3 style="color: #0d9488; font-size: 18px; margin-bottom: 15px; border-bottom: 2px solid #0d9488; padding-bottom: 5px;">RECONOCIMIENTOS Y LOGROS</h3>
-          <ul style="margin: 0; padding-left: 20px;">
-            <li><strong>Técnico del Año 2023</strong> - Hospital Universitario La Paz</li>
-            <li><strong>Mejor Caso Clínico Presentado</strong> - XXXV Congreso Nacional de Anatomía Patológica (2022)</li>
-            <li><strong>Premio a la Innovación Técnica</strong> - Sociedad Española de Técnicos en Anatomía Patológica (2021)</li>
-            <li><strong>Certificación de Excelencia en Bioseguridad</strong> - Ministerio de Sanidad (2022)</li>
-          </ul>
-        </div>
-
-        <!-- Publicaciones -->
-        <div style="margin-bottom: 30px;">
-          <h3 style="color: #0d9488; font-size: 18px; margin-bottom: 15px; border-bottom: 2px solid #0d9488; padding-bottom: 5px;">PUBLICACIONES CIENTÍFICAS</h3>
-          <ul style="margin: 0; padding-left: 20px; font-size: 14px;">
-            <li>"Protocolo optimizado para el procesamiento de biopsias renales" - Revista Española de Patología (2023)</li>
-            <li>"Implementación de controles de calidad en citología cervical" - Acta Cytologica Española (2022)</li>
-            <li>"Nuevas técnicas de tinción para diagnóstico diferencial" - Patología Práctica (2021)</li>
-          </ul>
-        </div>
-
-        <!-- Idiomas e Información Adicional -->
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
-          <div>
-            <h3 style="color: #0d9488; font-size: 18px; margin-bottom: 15px; border-bottom: 2px solid #0d9488; padding-bottom: 5px;">IDIOMAS</h3>
-            <ul style="margin: 0; padding-left: 20px;">
-              <li><strong>Español:</strong> Nativo</li>
-              <li><strong>Inglés:</strong> Nivel B2 (Intermedio-Alto)</li>
-            </ul>
-          </div>
-          <div>
-            <h3 style="color: #0d9488; font-size: 18px; margin-bottom: 15px; border-bottom: 2px solid #0d9488; padding-bottom: 5px;">INFORMACIÓN ADICIONAL</h3>
-            <ul style="margin: 0; padding-left: 20px; font-size: 14px;">
-              <li>15,000+ muestras procesadas</li>
-              <li>8 años de experiencia</li>
-              <li>25+ técnicas dominadas</li>
-              <li>Disponibilidad inmediata</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    `;
-
-    // Crear elemento temporal para el PDF
-    const tempDiv = document.createElement('div');
-    tempDiv.innerHTML = cvContent;
-    tempDiv.style.position = 'absolute';
-    tempDiv.style.left = '-9999px';
-    document.body.appendChild(tempDiv);
+    
+    if (!pdfRef.current) return;
 
     const opt = {
-      margin: [0.5, 0.5, 0.5, 0.5],
-      filename: 'CV-Maria-Elena-Rodriguez-Anatomia-Patologica.pdf',
+      margin: 0,
+      filename: 'CV-Wanda-Peralta.pdf',
       image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { 
+      html2canvas: {
         scale: 2,
         useCORS: true,
-        letterRendering: true,
-        backgroundColor: '#ffffff'
+        backgroundColor: '#fff'
       },
-      jsPDF: { 
-        unit: 'in', 
-        format: 'a4', 
-        orientation: 'portrait',
-        compress: true
-      },
-      pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
     };
-    
-    html2pdf().set(opt).from(tempDiv).save().then(() => {
-      document.body.removeChild(tempDiv);
-    });
+
+    html2pdf().set(opt).from(pdfRef.current).save();
   };
 
   const scrollToSection = (href: string) => {
@@ -272,7 +211,11 @@ const Header = () => {
             CV Digital
           </div>
 
-          {/* Desktop Navigation */}
+          <div style={{ display: 'none' }}>
+            <CV ref={pdfRef} />
+          </div>
+
+          {/* Navegacion */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
@@ -295,7 +238,7 @@ const Header = () => {
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Boton Mobile */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden p-2"
@@ -304,7 +247,7 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Navegacion Mobile */}
         {isMenuOpen && (
           <div className="md:hidden mt-4 bg-white rounded-lg shadow-lg border">
             <div className="py-2">

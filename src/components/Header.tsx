@@ -208,7 +208,7 @@ const Header = () => {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="text-2xl font-bold text-teal-600">
-            CV Digital
+            Wanda Peralta
           </div>
 
           <div style={{ display: 'none' }}>

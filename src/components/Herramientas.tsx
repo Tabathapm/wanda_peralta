@@ -9,11 +9,11 @@ const Herramientas = () => {
       color: "teal",
       herramientas: [
         { nombre: "Hematoxilina-Eosina (HE)", nivel: 95 },
-        { nombre: "Tricrómico de Masson", nivel: 90 },
-        { nombre: "PAS (Ácido Peryódico de Schiff)", nivel: 88 },
+        { nombre: "Tricrómico de Masson", nivel: 80 },
+        { nombre: "PAS (Ácido Peryódico de Schiff)", nivel: 90 },
         { nombre: "Reticulina de Gomori", nivel: 85 },
-        { nombre: "Van Gieson", nivel: 87 },
-        { nombre: "Azul de Toluidina", nivel: 82 }
+        { nombre: "Giemsa", nivel: 87 },
+        { nombre: "Jones", nivel: 85 }
       ]
     },
 
@@ -22,12 +22,12 @@ const Herramientas = () => {
       icono: <FlaskConical size={32} />,
       color: "blue",
       herramientas: [
-        { nombre: "Inmunohistoquímica", nivel: 88 },
-        { nombre: "Citología Ginecológica", nivel: 85 },
-        { nombre: "Citología de Líquidos", nivel: 80 },
+        { nombre: "Inmunohistoquímica", nivel: 70 },
+        { nombre: "Citología Ginecológica", nivel: 95 },
+        { nombre: "Citología de Líquidos", nivel: 90 },
         { nombre: "Técnicas de Congelación", nivel: 78 },
-        { nombre: "Microscopía Electrónica", nivel: 70 },
-        { nombre: "Hibridación in situ", nivel: 65 }
+        { nombre: "Microscopía Electrónica", nivel: 13 },
+        { nombre: "Hibridación in situ", nivel: 13 }
       ]
     },
     {
@@ -35,12 +35,12 @@ const Herramientas = () => {
       icono: <Wrench size={32} />,
       color: "purple",
       herramientas: [
-        { nombre: "Micrótomo Rotatorio", nivel: 95 },
+        { nombre: "Micrótomo Rotatorio", nivel: 100 },
         { nombre: "Procesador de Tejidos", nivel: 92 },
-        { nombre: "Estación de Inclusión", nivel: 90 },
+        { nombre: "Estación de Inclusión", nivel: 95 },
         { nombre: "Teñidor Automático", nivel: 88 },
-        { nombre: "Criostato", nivel: 85 },
-        { nombre: "Microscopio Óptico", nivel: 98 }
+        { nombre: "Criostato", nivel: 70 },
+        { nombre: "Microscopio Óptico", nivel: 100 }
       ]
     },
     {
@@ -51,9 +51,9 @@ const Herramientas = () => {
         { nombre: "Protocolos de Bioseguridad", nivel: 95 },
         { nombre: "Control de Calidad", nivel: 92 },
         { nombre: "Gestión de Residuos", nivel: 90 },
-        { nombre: "Documentación ISO", nivel: 85 },
-        { nombre: "Auditorías Internas", nivel: 80 },
-        { nombre: "Trazabilidad de Muestras", nivel: 88 }
+        { nombre: "Documentación ISO", nivel: 50 },
+        { nombre: "Auditorías Internas", nivel: 50 },
+        { nombre: "Trazabilidad de Muestras", nivel: 87 }
       ]
     }
   ];
@@ -138,21 +138,21 @@ const Herramientas = () => {
             <h3 className="text-2xl font-semibold text-gray-900 mb-6 text-center">
               Competencias Adicionales
             </h3>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 gap-6">
               <div className="text-center">
                 <h4 className="font-semibold text-gray-900 mb-3">Sistemas de Gestión</h4>
                 <div className="space-y-2">
-                  <span className="inline-block bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">LIMS</span>
+                  {/* <span className="inline-block bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">LIMS</span> */}
                   <span className="inline-block bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">ISO 15189</span>
                 </div>
               </div>
-              <div className="text-center">
+              {/* <div className="text-center">
                 <h4 className="font-semibold text-gray-900 mb-3">Software Especializado</h4>
                 <div className="space-y-2">
                   <span className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">ImageJ</span>
                   <span className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Aperio</span>
                 </div>
-              </div>
+              </div> */}
               <div className="text-center">
                 <h4 className="font-semibold text-gray-900 mb-3">Idiomas</h4>
                 <div className="space-y-2">

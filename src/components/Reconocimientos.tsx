@@ -35,8 +35,9 @@ const Reconocimientos = () => {
   ];
 
   return (
-    <section id="reconocimientos" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-6">
+    <section id="reconocimientos" className="">
+    {/*<section id="reconocimientos" className="py-20 bg-gray-50">
+       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Reconocimientos y Logros</h2>
           <div className="w-20 h-1 bg-teal-600 mx-auto mb-6"></div>
@@ -44,10 +45,10 @@ const Reconocimientos = () => {
             A lo largo de mi carrera profesional, he tenido el honor de recibir diversos 
             reconocimientos que reflejan mi compromiso con la excelencia en anatomía patológica.
           </p>
-        </div>
+        </div> */}
 
         {/* Reconocimientos */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+        {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
           {reconocimientos.map((reconocimiento, index) => (
             <div key={index} className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <div className={`w-16 h-16 ${reconocimiento.color} rounded-full flex items-center justify-center mb-4 text-white`}>
@@ -63,11 +64,11 @@ const Reconocimientos = () => {
               <p className="text-gray-600 text-sm leading-relaxed">{reconocimiento.descripcion}</p>
             </div>
           ))}
-        </div>
+        </div> */}
 
         <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* Certificaciones */}
-          <div className="bg-white p-8 rounded-2xl shadow-lg">
+          {/* <div className="bg-white p-8 rounded-2xl shadow-lg">
             <h3 className="text-2xl font-semibold text-gray-900 mb-6 flex items-center">
               <Award className="text-teal-600 mr-3" size={28} />
               Certificaciones Profesionales
@@ -80,10 +81,10 @@ const Reconocimientos = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Publicaciones */}
-          <div className="bg-white p-8 rounded-2xl shadow-lg">
+          {/* <div className="bg-white p-8 rounded-2xl shadow-lg">
             <h3 className="text-2xl font-semibold text-gray-900 mb-6 flex items-center">
               <Star className="text-purple-600 mr-3" size={28} />
               Publicaciones Científicas
@@ -101,11 +102,11 @@ const Reconocimientos = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Impacto Profecional */}
-        <div className="mt-16 max-w-4xl mx-auto">
+        {/* <div className="mt-16 max-w-4xl mx-auto">
           <div className="bg-gradient-to-r from-teal-600 to-cyan-600 p-8 rounded-2xl text-white">
             <h3 className="text-2xl font-semibold mb-8 text-center">Impacto Profesional</h3>
             <div className="grid md:grid-cols-4 gap-6 text-center">
@@ -127,8 +128,9 @@ const Reconocimientos = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </div> */}
+
+      {/* </div> */}
     </section>
   );
 };

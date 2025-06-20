@@ -7,7 +7,7 @@ const Intereses = () => {
       titulo: "Investigación Médica",
       icono: <Microscope size={32} />,
       color: "bg-teal-500",
-      descripcion: "Seguimiento de avances en patología molecular y nuevas técnicas diagnósticas."
+      descripcion: "Seguimiento de avances y nuevas técnicas."
     },
     {
       titulo: "Fotografía Científica",
@@ -72,20 +72,7 @@ const Intereses = () => {
             </div>
           </div>
         </div> */}
-
-        {/* Filosofía */}
-        <div className="mt-16 max-w-4xl mx-auto text-center">
-          <div className="bg-white p-8 rounded-2xl shadow-lg border">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">Mi Filosofía Profesional</h3>
-            <blockquote className="text-lg text-gray-700 italic leading-relaxed">
-              "Cada muestra que proceso representa una historia humana única. 
-              Mi compromiso va más allá de la técnica: es contribuir con precisión 
-              y dedicación al diagnóstico que puede cambiar la vida de una persona. 
-              La formación continua y el cuidado personal me permiten ofrecer 
-              siempre lo mejor de mí en esta noble profesión."
-            </blockquote>
-          </div>
-        </div>
+        
       </div>
     </section>
   );

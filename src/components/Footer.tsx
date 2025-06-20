@@ -1,9 +1,39 @@
 //import React from 'react';
 import { Mail, Phone, MapPin, Linkedin, FileText, Heart } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Download, Menu, X } from 'lucide-react';
+import html2pdf from 'html2pdf.js';
+import CV from './CV';
 
 const Footer = () => {
+
+  const pdfRef = useRef();
+  
+    const downloadPDF = () => {
+      
+      if (!pdfRef.current) return;
+  
+      const opt = {
+        margin: 0,
+        filename: 'CV-Wanda-Peralta.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: {
+          scale: 2,
+          useCORS: true,
+          backgroundColor: '#fff'
+        },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+      };
+  
+      html2pdf().set(opt).from(pdfRef.current).save();
+    };
+
   return (
     <footer className="bg-gray-900 text-white py-12">
+      <div style={{ display: 'none' }}>
+        <CV ref={pdfRef} />
+      </div>
+      
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Info de contacto */}
@@ -22,6 +52,18 @@ const Footer = () => {
                 <MapPin size={18} className="text-teal-400" />
                 <span>Buenos Aires, Argentina</span>
               </div>
+
+              <div className="flex items-center space-x-3">
+                <div className="hidden md:flex items-center space-x-4">
+                  <button
+                    onClick={downloadPDF}
+                    className="flex items-center space-x-2 bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition-colors duration-200">
+                      <Download size={18} />
+                      <span>Descargar CV</span>
+                    </button>
+                  </div>
+              </div>
+
             </div>
           </div>
 

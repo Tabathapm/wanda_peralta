@@ -54,7 +54,7 @@ const Footer = () => {
               </div>
 
               <div className="flex items-center space-x-3">
-                <div className="hidden md:flex items-center space-x-4">
+                <div className="flex items-center items-center space-x-4">
                   <button
                     onClick={downloadPDF}
                     className="flex items-center space-x-2 bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition-colors duration-200">

@@ -13,7 +13,7 @@ const Header = () => {
     { href: '#educacion', label: 'Formación' },
     { href: '#herramientas', label: 'Competencias' },
     { href: '#intereses', label: 'Intereses' },
-    { href: '#reconocimientos', label: 'Reconocimientos' },
+    // { href: '#reconocimientos', label: 'Reconocimientos' },
   ];
 
   useEffect(() => {

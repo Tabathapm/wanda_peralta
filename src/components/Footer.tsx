@@ -90,6 +90,9 @@ const Footer = () => {
               <a href="#herramientas" className="block hover:text-teal-400 transition-colors duration-200">
                 Competencias
               </a>
+              <a href="#galeria" className="block hover:text-teal-400 transition-colors duration-200">
+                Galería
+              </a>
             </div>
           </div>
 

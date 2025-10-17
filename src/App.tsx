@@ -8,6 +8,7 @@ import Herramientas from './components/Herramientas';
 import Intereses from './components/Intereses';
 import Reconocimientos from './components/Reconocimientos';
 import Footer from './components/Footer';
+import Galeria from './components/Galeria';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Herramientas />
         <Intereses />
         <Reconocimientos />
+        <Galeria />
       </main>
       <Footer />
     </div>

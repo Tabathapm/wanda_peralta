@@ -4,10 +4,24 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wanda Peralta</title>
-  <meta name="description" content="Conocé el perfil profesional de Wanda Peralta. CV, experiencia y más.">  </head>
-  
-  <!-- Open Graph para redes sociales -->
+    <meta name="theme-color" content="#128b80" />
+    <title>Wanda Peralta · Anatomía Patológica</title>
+    <meta name="description" content="Conocé el perfil profesional de Wanda Peralta. CV, experiencia y más.">
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+      // Evita el "flash" de tema claro si el usuario ya eligió modo oscuro
+      if (localStorage.getItem('theme') === 'dark' ||
+        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+    </script>
+
+    <!-- Open Graph para redes sociales -->
     <meta property="og:title" content="Wanda Peralta - Portfolio Profesional" />
     <meta property="og:description" content="Conocé el perfil profesional de Wanda Peralta. Portfolio, CV, experiencia y más." />
     <meta property="og:image" content="https://i.imgur.com/gnajqj6.png" />
@@ -19,6 +33,7 @@
     <meta name="twitter:title" content="Wanda Peralta - Portfolio Profesional" />
     <meta name="twitter:description" content="Conocé el perfil profesional de Wanda Peralta. Portfolio, CV, experiencia y más." />
     <meta name="twitter:image" content="https://i.imgur.com/gnajqj6.png" />
+  </head>
 
   <body>
     <div id="root"></div>

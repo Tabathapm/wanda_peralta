@@ -1,3 +1,52 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: 'Sora', ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background-color: #78e0d2;
+  color: #062b29;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #78e0d2;
+  border-radius: 999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background-color: #155954;
+}
+
+/* Utilidad para animar secciones al entrar en viewport */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}

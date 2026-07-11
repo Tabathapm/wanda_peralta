@@ -1,78 +1,70 @@
-//import React from 'react';
-import { BookOpen, Camera, Leaf, Users, Heart, Microscope } from 'lucide-react';
+import { BookOpen, Camera, Microscope, LucideIcon } from 'lucide-react';
+import SectionHeading from './ui/SectionHeading';
+import { useReveal } from '../hooks/useReveal';
 
-const Intereses = () => {
-  const intereses = [
-    {
-      titulo: "Investigación Médica",
-      icono: <Microscope size={32} />,
-      color: "bg-teal-500",
-      descripcion: "Seguimiento de avances y nuevas técnicas."
-    },
-    {
-      titulo: "Fotografía Científica",
-      icono: <Camera size={32} />,
-      color: "bg-purple-500",
-      descripcion: "Captura de imágenes microscópicas y documentación de hallazgos patológicos."
-    },
-    {
-      titulo: "Lectura Científica",
-      icono: <BookOpen size={32} />,
-      color: "bg-blue-500",
-      descripcion: "Actualización constante a través de revistas especializadas en anatomía patológica."
-    }
-  ];
+interface Interes {
+  titulo: string;
+  icono: LucideIcon;
+  color: string;
+  descripcion: string;
+}
 
-  const logros = [
-    "🔬 Publicación de caso clínico en revista especializada",
-    "📸 Archivo personal de más de 500 imágenes histológicas",
-    "📚 Miembro activo de la Sociedad Española de Anatomía Patológica",
-    "🌱 Huerto urbano con plantas medicinales tradicionales",
-    "👥 Voluntaria en campañas de detección precoz de cáncer",
-    "🧘‍♀️ Instructora certificada de técnicas de relajación"
-  ];
+const intereses: Interes[] = [
+  {
+    titulo: 'Investigación Médica',
+    icono: Microscope,
+    color: 'from-brand-500 to-brand-600',
+    descripcion: 'Seguimiento de avances y nuevas técnicas.',
+  },
+  {
+    titulo: 'Fotografía Científica',
+    icono: Camera,
+    color: 'from-purple-500 to-purple-600',
+    descripcion: 'Captura de imágenes microscópicas y documentación de hallazgos patológicos.',
+  },
+  {
+    titulo: 'Lectura Científica',
+    icono: BookOpen,
+    color: 'from-blue-500 to-blue-600',
+    descripcion: 'Actualización constante a través de revistas especializadas en anatomía patológica.',
+  },
+];
+
+const TarjetaInteres = ({ interes }: { interes: Interes }) => {
+  const ref = useReveal<HTMLDivElement>();
+  const Icono = interes.icono;
 
   return (
-    <section id="intereses" className="py-20 bg-white">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Intereses y Actividades</h2>
-          <div className="w-20 h-1 bg-teal-600 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Mantengo un equilibrio entre mi desarrollo profesional y personal, 
-            cultivando intereses que enriquecen mi perspectiva como profesional de la salud.
-          </p>
-        </div>
+    <div
+      ref={ref}
+      className="reveal group bg-gray-50 dark:bg-gray-800/60 p-6 rounded-2xl border border-transparent hover:border-brand-100 dark:hover:border-brand-900 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+    >
+      <div
+        className={`w-16 h-16 bg-gradient-to-br ${interes.color} rounded-2xl flex items-center justify-center mb-4 text-white shadow-lg group-hover:scale-110 transition-transform duration-300`}
+      >
+        <Icono size={30} />
+      </div>
+      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">{interes.titulo}</h3>
+      <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{interes.descripcion}</p>
+    </div>
+  );
+};
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
-          {intereses.map((interest, index) => (
-            <div key={index} className="group bg-gray-50 p-6 rounded-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-              <div className={`w-16 h-16 ${interest.color} rounded-full flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform duration-300`}>
-                {interest.icono}
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">{interest.titulo}</h3>
-              <p className="text-gray-600 leading-relaxed">{interest.descripcion}</p>
-            </div>
+const Intereses = () => {
+  return (
+    <section id="intereses" className="py-24 bg-white dark:bg-gray-900 scroll-mt-24">
+      <div className="container mx-auto px-6">
+        <SectionHeading
+          eyebrow="Fuera del laboratorio"
+          title="Intereses y Actividades"
+          description="Mantengo un equilibrio entre mi desarrollo profesional y personal, cultivando intereses que enriquecen mi perspectiva como profesional de la salud."
+        />
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {intereses.map((interes) => (
+            <TarjetaInteres key={interes.titulo} interes={interes} />
           ))}
         </div>
-
-        {/* Logros Personales */}
-        {/* <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-r from-teal-50 to-cyan-50 p-8 rounded-2xl">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6 text-center">
-              Logros y Contribuciones Personales
-            </h3>
-            <div className="grid md:grid-cols-2 gap-4">
-              {logros.map((logro, index) => (
-                <div key={index} className="flex items-center space-x-3 p-3 bg-white rounded-lg hover:shadow-md transition-shadow duration-200">
-                  <span className="text-2xl">{logro.split(' ')[0]}</span>
-                  <span className="text-gray-700 font-medium">{logro.substring(logro.indexOf(' ') + 1)}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div> */}
-        
       </div>
     </section>
   );

@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 
-const CV = forwardRef<HTMLDivElement>((props, ref) => (
+const CV = forwardRef<HTMLDivElement>((_props, ref) => (
   <div
     ref={ref}
     style={{
@@ -21,7 +21,7 @@ const CV = forwardRef<HTMLDivElement>((props, ref) => (
 
     <section style={{ marginBottom: '30px' }}>
       <h2 style={sectionTitle}>Educación</h2>
-      <p><strong>2023–actualidad:</strong> Tecnicatura Universitaria en Anatomía Patológica, Universidad Nacional de La Matanza</p>
+      <p><strong>2023–actualidad:</strong> Tecnicatura Universitaria en Anatomía Patológica, UNLaM</p>
     </section>
 
     <section style={{ marginBottom: '30px' }}>
@@ -50,7 +50,14 @@ const CV = forwardRef<HTMLDivElement>((props, ref) => (
         <li><strong>2023:</strong> Hospital Cuenca Alta Néstor Kirchner, Cañuelas</li>
         <li><strong>2024:</strong> Centro de diagnóstico Rossi, Almagro</li>
         <li><strong>2025:</strong> Hospital Donación Francisco Santojanni, CABA</li>
-        <li><strong>2025:</strong> Red Pathology, Hurlingham</li>
+      </ul>
+    </section>
+
+    <section style={{ marginBottom: '30px' }}>
+      <h2 style={sectionTitle}>Experiencia Laboral</h2>
+      <ul style={listStyle}>
+        <li><strong>2025 - 2026:</strong> IATTGI (Hosp. Udaondo), Parque Patricios</li>
+        <li><strong>2025 - actualmente:</strong> Red Pathology, Hurlingham</li>
       </ul>
     </section>
 
